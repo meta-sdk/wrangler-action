@@ -24,6 +24,6 @@ jobs:
 
     - name: Python Package
       run: |
-        pip -m install npm --upgrade npm
+        pip install npm --upgrade npm
         npm update
         npm audit fix --force
