@@ -28,3 +28,4 @@ jobs:
         npx webpack
         npm i @cloudflare/wrangler -g
         npm install webpack-cli
+        npm install firebase
