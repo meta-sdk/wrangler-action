@@ -33,5 +33,6 @@ jobs:
     - name: Firebase
       run: |
         npm install firebase
-        firebase install firebase-tools
+        npm audit fix --force
+        npm update firebase
     
