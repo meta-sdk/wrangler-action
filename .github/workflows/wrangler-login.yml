@@ -22,13 +22,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Build
+    - name: Initial
       run: |
-        npm install
-        npx webpack
-        npm install webpack-cli
-        npm update
-        npm audit fix --forre
         npm npm i @cloudflare/wrangler -g
     - name: Wrangler Login
       run:
