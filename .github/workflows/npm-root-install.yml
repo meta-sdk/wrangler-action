@@ -27,16 +27,8 @@ jobs:
       matrix:
         node-version: ${{ fromJson(needs.matrix.outputs.latest) }}
         include:
-          - node-version: "9.2"
-          - node-version: "9.1"
-          - node-version: "9.0"
-          - node-version: "6.1"
-          - node-version: "5.9"
-          - node-version: "4.6"
-          - node-version: "4.5"
-          - node-version: "4.4"
-          - node-version: "0.12"
-          - node-version: "0.10"
+          - node-version: "12.x"
+          - node-version: "13.x"
 
     steps:
       - uses: actions/checkout@v2
