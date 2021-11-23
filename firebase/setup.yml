@@ -1,2 +1,6 @@
-name: Setup Firebase
- run: npm install -g firebase-tools
+# Run multiple scripts
+jobs:
+  - name: Setup Firebase
+    run: npm install -g firebase-tools
+  - name: Firebase Login
+    run: firebase login
