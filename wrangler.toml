@@ -1,0 +1,5 @@
+type = "webpack"
+name = "my-worker"
+account_id = "12345678901234567890"
+workers_dev = true
+webpack_config = "webpack.config.js"
