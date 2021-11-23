@@ -24,7 +24,7 @@ jobs:
 
     - name: Initial
       run: |
-        npm npm i @cloudflare/wrangler -g
+        npm i @cloudflare/wrangler -g
     - name: Wrangler Login
       run:
         wranger login
