@@ -13,7 +13,7 @@ jobs:
         with:
           versionsAsRoot: true
           type: majors
-          preset: '>=1'
+          preset: '>=10'
 
   nodes:
     needs: [matrix]
@@ -22,23 +22,6 @@ jobs:
     name: 'nvm install-latest-npm'
     runs-on: ubuntu-latest
 
-    strategy:
-      fail-fast: false
-      matrix:
-        node-version: ${{ fromJson(needs.matrix.outputs.latest) }}
-        include:
-          - node-version: "12.x"
-          - node-version: "13.x"
-
-    steps:
-      - uses: actions/checkout@v2
-      - uses: ljharb/actions/node/install@main
-        name: 'nvm install-latest-npm'
-        with:
-          node-version: ${{ matrix.node-version }}
-          skip-ls-check: true
-          skip-install: true
-      - run: npm --version
 
   node:
     permissions:
